@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.switchroot.rebooter">
+
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_switch"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.Material3.DayNight.NoActionBar"
+        >
+
+        <!-- Base (sin icono, sin launcher) -->
+        <activity
+            android:name=".RebootActivityBase"
+            android:exported="false" />
+
+        <!-- Ubuntu -->
+        <activity
+            android:name=".RebootUbuntuActivity"
+            android:exported="true"
+            android:label="Ubuntu (reboot)"
+            android:icon="@mipmap/ic_ubuntu"
+            >
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Atmosphere -->
+        <activity
+            android:name=".RebootAtmosActivity"
+            android:exported="true"
+            android:label="Atmosphère (reboot)"
+            android:icon="@mipmap/ic_atmosphere"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- OFW -->
+        <activity
+            android:name=".RebootOfwActivity"
+            android:exported="true"
+            android:label="SwitchOS (reboot)"
+            android:icon="@mipmap/ic_switch"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>
