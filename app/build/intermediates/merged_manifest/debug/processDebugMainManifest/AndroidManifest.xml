@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.switchroot.rebootmanager"
-    android:versionCode="1"
-    android:versionName="0.1.0" >
+    package="org.switchroot.rebooter"
+    android:versionCode="2"
+    android:versionName="2.0.0" >
 
     <uses-sdk
         android:minSdkVersion="26"
@@ -15,13 +15,13 @@
     <uses-permission android:name="android.permission.REBOOT" />
 
     <permission
-        android:name="com.switchroot.rebootmanager.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:name="org.switchroot.rebooter.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
         android:protectionLevel="signature" />
 
-    <uses-permission android:name="com.switchroot.rebootmanager.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+    <uses-permission android:name="org.switchroot.rebooter.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
 
     <application
-        android:name="com.switchroot.rebootmanager.RebootManagerApp"
+        android:name="org.switchroot.rebooter.RebootManagerApp"
         android:allowBackup="false"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
@@ -31,14 +31,14 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:testOnly="true"
-        android:theme="@style/Theme.SwitchRebootManager" >
+        android:theme="@style/Theme.SwitchRebooter" >
         <activity
-            android:name="com.switchroot.rebootmanager.ui.MainActivity"
+            android:name="org.switchroot.rebooter.ui.MainActivity"
             android:configChanges="orientation|screenSize|keyboardHidden|uiMode"
             android:exported="true"
             android:launchMode="singleTask"
             android:screenOrientation="landscape"
-            android:theme="@style/Theme.SwitchRebootManager.Fullscreen" >
+            android:theme="@style/Theme.SwitchRebooter.Fullscreen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -48,7 +48,7 @@
 
         <provider
             android:name="androidx.startup.InitializationProvider"
-            android:authorities="com.switchroot.rebootmanager.androidx-startup"
+            android:authorities="org.switchroot.rebooter.androidx-startup"
             android:exported="false" >
             <meta-data
                 android:name="androidx.emoji2.text.EmojiCompatInitializer"

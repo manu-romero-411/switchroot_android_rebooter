@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.switchroot.rebootmanager.app-mergeDebugResources-35:/values-nb/values-nb.xml",
+            "outputFile": "org.switchroot.rebooter.app-mergeDebugResources-35:/values-nb/values-nb.xml",
             "map": [
                 {
                     "source": "/home/manuel/.gradle/caches/9.3.0/transforms/abeb515357a7db3fd22e844d1e55f2be/transformed/core-1.13.1/res/values-nb/values-nb.xml",

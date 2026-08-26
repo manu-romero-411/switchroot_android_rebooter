@@ -32,5 +32,5 @@ string error_root_required
 string error_unsupported_device
 string picker_prompt
 string toggle_show_hekate_ipl
-style Theme.SwitchRebootManager
-style Theme.SwitchRebootManager.Fullscreen
+style Theme.SwitchRebooter
+style Theme.SwitchRebooter.Fullscreen

@@ -4,16 +4,16 @@ plugins {
 }
 
 android {
-    namespace = "com.switchroot.rebootmanager"
+    namespace = "org.switchroot.rebooter"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.switchroot.rebootmanager"
+        applicationId = "org.switchroot.rebooter"
         // minSdk 26: Switchroot Android builds (LineageOS 18.1 / 19.1) run well above this.
         minSdk = 26
         targetSdk = 34
-        versionCode = 1
-        versionName = "0.1.0"
+        versionCode = 2
+        versionName = "2.0.0"
     }
 
     buildTypes {

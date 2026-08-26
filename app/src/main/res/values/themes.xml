@@ -4,11 +4,11 @@
          se encarga en tiempo de ejecución de aplicar la paleta "Material You" del
          sistema en Android 12+ (API 31+); en versiones anteriores cae a la paleta
          estática por defecto de Material3. -->
-    <style name="Theme.SwitchRebootManager" parent="Theme.Material3.DayNight.NoActionBar" />
+    <style name="Theme.SwitchRebooter" parent="Theme.Material3.DayNight.NoActionBar" />
 
     <!-- Variante estilo popup flotante: fondo transparente, dimm sobre la pantalla
          anterior, y comportamiento de diálogo para que no se vea pantalla negra. -->
-    <style name="Theme.SwitchRebootManager.Fullscreen" parent="Theme.Material3.DayNight.Dialog">
+    <style name="Theme.SwitchRebooter.Fullscreen" parent="Theme.Material3.DayNight.Dialog">
         <item name="android:windowNoTitle">true</item>
         <item name="windowNoTitle">true</item>
         <item name="android:windowActionBar">false</item>

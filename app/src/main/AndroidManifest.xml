@@ -12,13 +12,13 @@
         android:icon="@mipmap/ic_launcher"
         android:roundIcon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/Theme.SwitchRebootManager"
+        android:theme="@style/Theme.SwitchRebooter"
         android:supportsRtl="true">
 
         <activity
             android:name=".ui.MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.SwitchRebootManager.Fullscreen"
+            android:theme="@style/Theme.SwitchRebooter.Fullscreen"
             android:launchMode="singleTask"
             android:screenOrientation="landscape"
             android:configChanges="orientation|screenSize|keyboardHidden|uiMode">

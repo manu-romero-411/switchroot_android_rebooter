@@ -1,4 +1,4 @@
-com.switchroot.rebootmanager
+org.switchroot.rebooter
 anim abc_fade_in
 anim abc_fade_out
 anim abc_grow_fade_in_from_bottom
@@ -4613,8 +4613,8 @@ style Theme_MaterialComponents_Light_NoActionBar
 style Theme_MaterialComponents_Light_NoActionBar_Bridge
 style Theme_MaterialComponents_NoActionBar
 style Theme_MaterialComponents_NoActionBar_Bridge
-style Theme_SwitchRebootManager
-style Theme_SwitchRebootManager_Fullscreen
+style Theme_SwitchRebooter
+style Theme_SwitchRebooter_Fullscreen
 style ThemeOverlay_AppCompat
 style ThemeOverlay_AppCompat_ActionBar
 style ThemeOverlay_AppCompat_Dark
