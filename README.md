@@ -2,6 +2,8 @@
 
 A utility for modded Nintendo Switch consoles running Android (Switchroot). It provides a fast, modern interface to reboot directly into specific Hekate boot entries, standard system actions, or other operating systems.
 
+![App Screenshot](misc/switchroot_rebooter_screenshot.png)
+
 ## Key Features
 
 *   Automatically scans `<SWITCH SD>/bootloader/ini/*.ini` and `<SWITCH SD>/bootloader/hekate_ipl.ini` for bootable entries.
