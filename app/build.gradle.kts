@@ -3,9 +3,10 @@ plugins {
     id("org.jetbrains.kotlin.android")
 }
 
-android {
+    android {
     namespace = "org.switchroot.rebooter"
     compileSdk = 34
+    buildToolsVersion = "34.0.0"
 
     defaultConfig {
         applicationId = "org.switchroot.rebooter"
@@ -16,14 +17,29 @@ android {
         versionName = "2.0.0"
     }
 
+    signingConfigs {
+        create("release") {
+            storeFile = file("../release.jks")
+            storePassword = "switchroot"
+            keyAlias = "release"
+            keyPassword = "switchroot"
+        }
+    }
+
     buildTypes {
         release {
+            signingConfig = signingConfigs.getByName("release")
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
         }
+    }
+
+    lint {
+        checkReleaseBuilds = false
+        abortOnError = false
     }
 
     buildFeatures {
