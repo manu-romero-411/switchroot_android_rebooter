@@ -1,53 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.switchroot.rebooter">
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Declarado por completitud; el reinicio/apagado reales se hacen vía shell root,
+         no a través de este permiso de plataforma (que requiere firma de sistema). -->
+    <uses-permission android:name="android.permission.REBOOT" tools:ignore="ProtectedPermissions" />
 
     <application
+        android:name=".RebootManagerApp"
         android:allowBackup="false"
-        android:icon="@mipmap/ic_switch"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/Theme.Material3.DayNight.NoActionBar"
-        >
+        android:theme="@style/Theme.SwitchRebootManager"
+        android:supportsRtl="true">
 
-        <!-- Base (sin icono, sin launcher) -->
         <activity
-            android:name=".RebootActivityBase"
-            android:exported="false" />
-
-        <!-- Ubuntu -->
-        <activity
-            android:name=".RebootUbuntuActivity"
+            android:name=".ui.MainActivity"
             android:exported="true"
-            android:label="Ubuntu (reboot)"
-            android:icon="@mipmap/ic_ubuntu"
-            >
-
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
-        <!-- Atmosphere -->
-        <activity
-            android:name=".RebootAtmosActivity"
-            android:exported="true"
-            android:label="Atmosphère (reboot)"
-            android:icon="@mipmap/ic_atmosphere"
-            >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
-        <!-- OFW -->
-        <activity
-            android:name=".RebootOfwActivity"
-            android:exported="true"
-            android:label="SwitchOS (reboot)"
-            android:icon="@mipmap/ic_switch"
-            >
+            android:theme="@style/Theme.SwitchRebootManager.Fullscreen"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:configChanges="orientation|screenSize|keyboardHidden|uiMode">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -55,5 +29,4 @@
         </activity>
 
     </application>
-
 </manifest>

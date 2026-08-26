@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ic_launcher_background">#1A1C1E</color>
+    <string name="action_hekate_menu">Hekate menu</string>
+    <string name="action_restart">Restart</string>
+    <string name="action_shutdown">Power off</string>
+    <string name="app_name">Switch Reboot Manager</string>
+    <string name="error_action_failed">Couldn\'t complete that action</string>
+    <string name="error_no_bootloader_folder">No bootloader/ folder found at the selected location</string>
+    <string name="error_open_folder_failed">Couldn\'t open the selected folder</string>
+    <string name="error_root_required">Root access is required to control the bootloader</string>
+    <string name="error_unsupported_device">This app only works on Nintendo Switch hardware</string>
+    <string name="picker_prompt">Select the bootloader/ folder on your SD card</string>
+    <string name="toggle_show_hekate_ipl">Show hekate_ipl entries</string>
+    <style name="Theme.SwitchRebootManager" parent="Theme.Material3.DayNight.NoActionBar"/>
+    <style name="Theme.SwitchRebootManager.Fullscreen" parent="Theme.Material3.DayNight.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.6</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        
+        <item name="android:windowMinWidthMajor">0%</item>
+        <item name="android:windowMinWidthMinor">0%</item>
+    </style>
+</resources>

@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "com.switchroot.rebootmanager.app-mergeDebugResources-36:/layout/item_boot_entry.xml",
+        "source": "com.switchroot.rebootmanager.app-main-39:/layout/item_boot_entry.xml"
+    },
+    {
+        "merged": "/home/manuel/.gradle/daemon/9.3.0/com.switchroot.rebootmanager.app-mergeDebugResources-36:/layout/item_boot_entry.xml",
+        "source": "/home/manuel/.gradle/daemon/9.3.0/com.switchroot.rebootmanager.app-main-39:/layout/item_boot_entry.xml"
+    },
+    {
+        "merged": "/home/manuel/.gradle/daemon/9.3.0/com.switchroot.rebootmanager.app-mergeDebugResources-36:/layout/activity_main.xml",
+        "source": "/home/manuel/.gradle/daemon/9.3.0/com.switchroot.rebootmanager.app-main-39:/layout/activity_main.xml"
+    }
+]

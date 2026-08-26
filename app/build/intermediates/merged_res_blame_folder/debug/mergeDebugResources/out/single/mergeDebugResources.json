@@ -1,0 +1,62 @@
+[
+    {
+        "merged": "/home/manuel/.gradle/daemon/9.3.0/com.switchroot.rebootmanager.app-debug-37:/drawable_ic_boot_generic.xml.flat",
+        "source": "/home/manuel/.gradle/daemon/9.3.0/com.switchroot.rebootmanager.app-main-39:/drawable/ic_boot_generic.xml"
+    },
+    {
+        "merged": "/home/manuel/.gradle/daemon/9.3.0/com.switchroot.rebootmanager.app-debug-37:/drawable_ic_boot_android.xml.flat",
+        "source": "/home/manuel/.gradle/daemon/9.3.0/com.switchroot.rebootmanager.app-main-39:/drawable/ic_boot_android.xml"
+    },
+    {
+        "merged": "/home/manuel/.gradle/daemon/9.3.0/com.switchroot.rebootmanager.app-debug-37:/drawable_ic_boot_shutdown.xml.flat",
+        "source": "/home/manuel/.gradle/daemon/9.3.0/com.switchroot.rebootmanager.app-main-39:/drawable/ic_boot_shutdown.xml"
+    },
+    {
+        "merged": "/home/manuel/.gradle/daemon/9.3.0/com.switchroot.rebootmanager.app-debug-37:/drawable_ic_boot_usb.xml.flat",
+        "source": "/home/manuel/.gradle/daemon/9.3.0/com.switchroot.rebootmanager.app-main-39:/drawable/ic_boot_usb.xml"
+    },
+    {
+        "merged": "/home/manuel/.gradle/daemon/9.3.0/com.switchroot.rebootmanager.app-debug-37:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "/home/manuel/.gradle/daemon/9.3.0/com.switchroot.rebootmanager.app-main-39:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "/home/manuel/.gradle/daemon/9.3.0/com.switchroot.rebootmanager.app-debug-37:/drawable_ic_boot_linux.xml.flat",
+        "source": "/home/manuel/.gradle/daemon/9.3.0/com.switchroot.rebootmanager.app-main-39:/drawable/ic_boot_linux.xml"
+    },
+    {
+        "merged": "/home/manuel/.gradle/daemon/9.3.0/com.switchroot.rebootmanager.app-debug-37:/layout_activity_main.xml.flat",
+        "source": "/home/manuel/.gradle/daemon/9.3.0/com.switchroot.rebootmanager.app-main-39:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/home/manuel/.gradle/daemon/9.3.0/com.switchroot.rebootmanager.app-debug-37:/drawable_ic_boot_payload.xml.flat",
+        "source": "/home/manuel/.gradle/daemon/9.3.0/com.switchroot.rebootmanager.app-main-39:/drawable/ic_boot_payload.xml"
+    },
+    {
+        "merged": "/home/manuel/.gradle/daemon/9.3.0/com.switchroot.rebootmanager.app-debug-37:/drawable_ic_boot_gamepad.xml.flat",
+        "source": "/home/manuel/.gradle/daemon/9.3.0/com.switchroot.rebootmanager.app-main-39:/drawable/ic_boot_gamepad.xml"
+    },
+    {
+        "merged": "/home/manuel/.gradle/daemon/9.3.0/com.switchroot.rebootmanager.app-debug-37:/layout_item_boot_entry.xml.flat",
+        "source": "/home/manuel/.gradle/daemon/9.3.0/com.switchroot.rebootmanager.app-main-39:/layout/item_boot_entry.xml"
+    },
+    {
+        "merged": "com.switchroot.rebootmanager.app-debug-37:/layout_item_boot_entry.xml.flat",
+        "source": "com.switchroot.rebootmanager.app-main-39:/layout/item_boot_entry.xml"
+    },
+    {
+        "merged": "/home/manuel/.gradle/daemon/9.3.0/com.switchroot.rebootmanager.app-debug-37:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/home/manuel/.gradle/daemon/9.3.0/com.switchroot.rebootmanager.app-main-39:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/home/manuel/.gradle/daemon/9.3.0/com.switchroot.rebootmanager.app-debug-37:/drawable_ic_boot_switch.xml.flat",
+        "source": "/home/manuel/.gradle/daemon/9.3.0/com.switchroot.rebootmanager.app-main-39:/drawable/ic_boot_switch.xml"
+    },
+    {
+        "merged": "/home/manuel/.gradle/daemon/9.3.0/com.switchroot.rebootmanager.app-debug-37:/drawable_ic_boot_restart.xml.flat",
+        "source": "/home/manuel/.gradle/daemon/9.3.0/com.switchroot.rebootmanager.app-main-39:/drawable/ic_boot_restart.xml"
+    },
+    {
+        "merged": "/home/manuel/.gradle/daemon/9.3.0/com.switchroot.rebootmanager.app-debug-37:/drawable_bg_boot_entry.xml.flat",
+        "source": "/home/manuel/.gradle/daemon/9.3.0/com.switchroot.rebootmanager.app-main-39:/drawable/bg_boot_entry.xml"
+    }
+]

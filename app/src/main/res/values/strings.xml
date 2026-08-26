@@ -1,3 +1,16 @@
 <resources>
-    <string name="app_name">Switchroot Rebooter</string>
+    <string name="app_name">Switch Reboot Manager</string>
+
+    <string name="toggle_show_hekate_ipl">Show hekate_ipl entries</string>
+
+    <string name="action_restart">Restart</string>
+    <string name="action_shutdown">Power off</string>
+    <string name="action_hekate_menu">Hekate menu</string>
+
+    <string name="error_unsupported_device">This app only works on Nintendo Switch hardware</string>
+    <string name="error_root_required">Root access is required to control the bootloader</string>
+    <string name="error_action_failed">Couldn\'t complete that action</string>
+    <string name="error_no_bootloader_folder">No bootloader/ folder found at the selected location</string>
+    <string name="error_open_folder_failed">Couldn\'t open the selected folder</string>
+    <string name="picker_prompt">Select the bootloader/ folder on your SD card</string>
 </resources>

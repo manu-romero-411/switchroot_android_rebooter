@@ -1,74 +1,45 @@
 # Switchroot Android Rebooter
 
-An utility intended for modded Switch running Android. It adds three icons to your Android launcher:
+A utility for modded Nintendo Switch consoles running Android (Switchroot). It provides a fast, modern interface to reboot directly into specific Hekate boot entries, standard system actions, or other operating systems.
 
-* Reboot to Original Stock Firmware (SysMMC)
-* Reboot to Atmosphère (EmuMMC)
-* Reboot to Ubuntu
+## Key Features
 
-Each icon calls **`root`** (so Magisk or similar is needed) to write some variables in `/sys` path:
+*   **Dynamic Discovery**: Automatically scans `/bootloader/ini/*.ini` and `/bootloader/hekate_ipl.ini` for bootable entries. No hardcoding required.
+*   **Modern Popup UI**: A sleek, centered dialog interface with Material You dynamic colors (Android 12+) and background dimming.
+*   **Real Icons Support**: Loads custom `.bmp` icons directly from your SD card (e.g., from `bootloader/res/`) just like Hekate does.
+*   **Performance Optimized**: Uses parallel processing and metadata caching to ensure an almost instantaneous startup, even with many entries.
+*   **Gamepad Ready**: Fully navigable with Joy-Cons or Pro Controllers. Supports D-pad/Joystick navigation, **A** to select, and **B** to exit.
+*   **Localized**: Full support for **English** and **Spanish**.
+*   **Smart Filtering**: Automatically hides entries containing "Android" or "Lineage" to keep the list focused on external boot targets.
 
-* `/sys/devices/r2p/action`: can be `self`, `bootloader` or `normal`. We use `self` here.
-* `/sys/devices/r2p/param1`: needs the INI entry number. They are sorted alphabetically, keep it in mind when putting your INIs in `/bootloader/ini`.
-* `/sys/devices/r2p/param2`: if set to 1, the system will look on the `/bootloader/ini` dir rather than the `/bootloader/hekate_ipl.ini` file.
+## How it Works (Technical Details)
 
-Refer to the [Switchroot Wiki](https://wiki.switchroot.org/wiki/android/android-11/11-r-ini-guide) for more detailed info.
+The app utilizes the **Reboot2Payload (R2P)** kernel driver to communicate with the bootloader. It requires **root access** (Magisk or KernelSU) to write to the following sysfs nodes:
 
-After setting all values, the app will trigger a reboot.
+*   **`/sys/devices/r2p/action`**: Defines the reboot target. The app sets this to `self` for specific entries or `bootloader` for the Hekate menu.
+*   **`/sys/devices/r2p/param1`**: The index of the entry. The app calculates this dynamically following Hekate's logic: alphabetical order of files in `/bootloader/ini/` and top-to-bottom order within each file.
+*   **`/sys/devices/r2p/param2`**: Set to `1` to look in the `/bootloader/ini/` folder, or `0` for the main `hekate_ipl.ini` file.
 
-## My setup (in which the app is based on)
+After configuring these nodes, the app triggers a graceful system reboot using `svc power reboot`.
 
-The implemented layout in my app is based on my own configuration in Hekate's `/bootloader/ini` entries. They can be rearranged in `app/src/main/java/org/switchroot/rebooter/Reboot####Activity.kt`. For example:
+Refer to the [Switchroot Wiki](https://wiki.switchroot.org/wiki/android/android-11/11-r-ini-guide) for more detailed info on R2P.
 
-```kotlin
-package org.switchroot.rebooter
+## Setup
 
-class RebootAtmosActivity : RebootActivityBase() {
-    override val param1Index: Int = 2 // Change this Int to the index that your Atmosphère INI has (alphabetically ordered in /bootloader/ini)
-}
-```
+1.  **Root Access**: Ensure your Switchroot installation has Magisk or KernelSU.
+2.  **First Launch**: The app will ask you to select the `bootloader` folder on your SD card using the Android Storage Access Framework (SAF). This permission is persisted, so you only need to do it once.
+3.  **Hekate IPL**: You can toggle the visibility of `hekate_ipl.ini` entries using the switch at the top right.
 
-These are examples of my INI entries for more precise reference:
+## Requirements
 
-### `android.ini` (entry 1 - not implemented)
+*   Nintendo Switch hardware.
+*   Switchroot Android (Android 10+ recommended).
+*   Root privileges.
 
-```inifile
-[Android]
-l4t=1
-boot_prefixes=switchroot/android/
-id=SWANDR
-r2p_action=bootloader
-...
-```
+## Development
 
-### `atmos_emummc.ini` (entry 2)
+This project is built with Kotlin and follows modern Android best practices (Coroutines, ViewBinding, Material 3).
 
-```inifile
-[SwitchOS Atmosphere]
-fss0=atmosphere/package3
-kip1=atmosphere/kip_patches/*
-emummcforce=1
-usb3force=1
-...
-```
-
-### `stock_sysmmc.ini` (entry 3)
-
-```inifile
-[SwitchOS Stock]
-ofw=1
-...
-```
-
-### `ubuntu.ini` (entry 4)
-
-```inifile
-[Ubuntu]
-l4t=1
-boot_prefixes=/switchroot/ubuntu-noble/
-id=SWR-NOB
-rootlabel_retries=100
-rootdev=sda2
-r2p_action=bootloader
-...
+```bash
+./gradlew assembleDebug
 ```
