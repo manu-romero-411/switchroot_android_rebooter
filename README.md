@@ -4,13 +4,13 @@ A utility for modded Nintendo Switch consoles running Android (Switchroot). It p
 
 ## Key Features
 
-*   **Dynamic Discovery**: Automatically scans `/bootloader/ini/*.ini` and `/bootloader/hekate_ipl.ini` for bootable entries. No hardcoding required.
-*   **Modern Popup UI**: A sleek, centered dialog interface with Material You dynamic colors (Android 12+) and background dimming.
-*   **Real Icons Support**: Loads custom `.bmp` icons directly from your SD card (e.g., from `bootloader/res/`) just like Hekate does.
-*   **Performance Optimized**: Uses parallel processing and metadata caching to ensure an almost instantaneous startup, even with many entries.
-*   **Gamepad Ready**: Fully navigable with Joy-Cons or Pro Controllers. Supports D-pad/Joystick navigation, **A** to select, and **B** to exit.
-*   **Localized**: Full support for **English** and **Spanish**.
-*   **Smart Filtering**: Automatically hides entries containing "Android" or "Lineage" to keep the list focused on external boot targets.
+*   Automatically scans `<SWITCH SD>/bootloader/ini/*.ini` and `<SWITCH SD>/bootloader/hekate_ipl.ini` for bootable entries.
+*   Uses a popup-like UI with Material You dynamic colors (Android 12+) and background dimming.
+*   Icons are loaded from the same locations that the Hekate inis point to, generally in `.bmp` format.
+*   Fully navigable with gamepads (tested on my Nintendo Switch Lite integrated gamepad).
+*   Label support for **English** and **Spanish**.
+
+NOTE: The program automatically hides entries containing `"android"` or `"lineage"`. Feel free to fork/modify this project and rebuild if you want them back.
 
 ## How it Works (Technical Details)
 
@@ -26,14 +26,14 @@ Refer to the [Switchroot Wiki](https://wiki.switchroot.org/wiki/android/android-
 
 ## Setup
 
-1.  **Root Access**: Ensure your Switchroot installation has Magisk or KernelSU.
-2.  **First Launch**: The app will ask you to select the `bootloader` folder on your SD card using the Android Storage Access Framework (SAF). This permission is persisted, so you only need to do it once.
+1.  **Root Access**: Ensure your Switchroot installation has Magisk or KernelSU. It's no difficult to set up, refer to Magisk documentation for details (recovery is entered on Switch by pressing `VOL+` while selecting the Android entry in Hekate, then keep the key pressed until the recovery appears).
+2.  **First Launch**: The app will ask you to select the `bootloader` folder on your SD card using the Android Storage Access Framework (SAF). This permission is persisted, so you only need to do it once. Yo have to select the folder correctly, or else this app won't work fine.
 3.  **Hekate IPL**: You can toggle the visibility of `hekate_ipl.ini` entries using the switch at the top right.
 
 ## Requirements
 
 *   Nintendo Switch hardware.
-*   Switchroot Android (Android 10+ recommended).
+*   Switchroot Android - tested on Android 15 (latest build as of v2.0 tag commit date), but should work on Android 11 as well.
 *   Root privileges.
 
 ## Development
